@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créer un compte — VetCare | Clinique Vétérinaire</title>
+<meta name="description" content="Inscrivez-vous sur VetCare pour gérer vos animaux et suivre leurs soins.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-layout">
+
+  <!-- Left panel -->
+  <div class="auth-panel auth-panel--visual">
+    <img src="https://images.pexels.com/photos/1591939/pexels-photo-1591939.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Animal de compagnie heureux">
+    <div class="auth-panel-overlay">
+      <a href="home.html" class="auth-logo">
+        <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/><circle cx="9" cy="9" r="1"/></svg></span>
+        <span class="logo-text"><strong>VetCare</strong><span>Clinique Vétérinaire</span></span>
+      </a>
+      <div class="auth-tagline">
+        <h2>Rejoignez la communauté VetCare</h2>
+        <p>Créez votre espace famille et suivez la santé de tous vos compagnons depuis une seule interface.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="auth-panel auth-panel--form">
+    <div class="auth-form-wrap">
+
+      <div class="auth-form-header">
+        <h1>Créer un compte</h1>
+        <p>Rejoignez VetCare gratuitement</p>
+      </div>
+
+      <form id="registerForm" novalidate>
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="regPrenom">Prénom <span>*</span></label>
+            <input class="form-input" type="text" id="regPrenom" name="prenom" placeholder="Votre prénom" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regNom">Nom <span>*</span></label>
+            <input class="form-input" type="text" id="regNom" name="nom" placeholder="Votre nom" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="regEmail">Email <span>*</span></label>
+          <input class="form-input" type="email" id="regEmail" name="email" placeholder="exemple@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="regPhone">Téléphone</label>
+          <input class="form-input" type="tel" id="regPhone" name="phone" placeholder="0556 12 34 56">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="regPassword">Mot de passe <span>*</span></label>
+          <div class="input-pwd-wrap">
+            <input class="form-input" type="password" id="regPassword" name="password" placeholder="Min. 8 caractères" required>
+            <button type="button" class="pwd-toggle" aria-label="Afficher" id="toggleRegPwd">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="regConfirm">Confirmer le mot de passe <span>*</span></label>
+          <input class="form-input" type="password" id="regConfirm" name="confirm" placeholder="Répétez le mot de passe" required>
+        </div>
+
+        <label class="auth-checkbox auth-checkbox--terms">
+          <input type="checkbox" name="terms" required>
+          <span>J'accepte les <a href="#" class="auth-link">conditions d'utilisation</a></span>
+        </label>
+
+        <button type="submit" class="btn btn--teal" style="width:100%;justify-content:center;margin-top:8px;" id="registerSubmitBtn">
+          Créer mon compte
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+
+      <div class="auth-success" id="registerSuccess" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
+        Compte créé avec succès ! Redirection en cours…
+      </div>
+
+      <div class="auth-form-footer">
+        Vous avez déjà un compte ? <a href="login.html" class="auth-link">Se connecter</a>
+      </div>
+
+      <a href="home.html" class="auth-back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Retour à l'accueil
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/register.js"></script>
+</body>
+</html>
